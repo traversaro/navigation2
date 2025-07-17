@@ -54,7 +54,7 @@ set(dependencies
   pluginlib
   image_transport
   cv_bridge
-  OpenCV
+  opencv_core
 )
 
 ament_target_dependencies(${executable_name}
