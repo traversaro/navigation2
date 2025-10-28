@@ -264,6 +264,14 @@ Route RouteServer::findRoute(
   return goal_intent_extractor_->pruneStartandGoal(route, goal, rerouting_info);
 }
 
+template<typename GoalT>
+Route RouteServer::findRoute(
+  const std::shared_ptr<const GoalT> goal)
+{
+  ReroutingState rerouting_info = ReroutingState();
+  return findRoute(goal, rerouting_info);
+}
+
 template<typename ActionT>
 void
 RouteServer::processRouteRequest(
